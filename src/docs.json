@@ -1,0 +1,39 @@
+{
+    "description": "Welcome to the unofficial KA Internal API documentation! If you're wondering if certain data can be accessed, if some endpoint requires authorization, or just want to know more about the API, you've come to the right place! In this webpage, every known API endpoint that the KA website uses is documented and described. If you happen to find a new one that isn't here, please leave a comment with some specifics like where you found it, how it can be triggered, and some technical info about the web request itself.",
+    "docs": {
+        "User": {
+            "title": "User",
+            "description": "All user endpoints take either `?kaid=<kaid>`, `?username=<username>`, `?email=<email>`, or `?userId=http://googleid.khanacademy.org/<userid>`",
+            "endpoints": [
+                {
+                    "url": "/api/internal/user/profile",
+                    "access": "Open Access",
+                    "method": "POST",
+                    "header": "Receive JSON with user info",
+                    "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more.",
+                    "code": {
+                        "countVideosCompleted": 224,
+                        "soundOn": false
+                    }
+                }
+            ]
+        },
+        "Scratchpads": {
+            "title": "Scratchpads",
+            "description": "All the scratchpads",
+            "endpoints": [
+                {
+                    "url": "/api/internal/user/profile",
+                    "access": "Auth Required",
+                    "method": "POST",
+                    "header": "Receive JSON with user info",
+                    "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more.",
+                    "code": {
+                        "countVideosCompleted": 224,
+                        "soundOn": false
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.endpoint-header-title, .endpoint-header-description {
+    margin: 0px;
+    margin-left: 10px;
+}
+.endpoint {
+    background: rgb(49, 68, 83);
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    position: relative;
+    font-weight: 300;
+}
+
+.endpoint-title {
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.endpoint-description {
+    margin-top: 4px;
+}
+
+.endpoint-toggle:hover {
+    cursor: grab;
+}
+
+.endpoint-url {
+    font-family: monospace;
+    margin-left: 3px;
+    display: inline-block;
+    font-weight: 300;
+}
+
+.endpoint-badge {
+    float: right;
+    margin: 0px;
+    margin-left: 6px;
+    margin-top: 10px;
+    padding: 4px;
+    background: rgb(38, 172, 58);
+    border-radius: 3px;
+    font-weight: 300;
+}
+
+.orange {
+    background: rgb(227, 156, 57);
+}
+
+.blue {
+    background: rgb(99, 193, 255);
+}
+
+.purple {
+    background: rgb(222, 60, 222);
+}
+
+.endpoint-header {
+    letter-spacing: 0.5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.endpoint-description {
+    margin-top: 0px
+}
+
+.endpoint-code {
+    background: white;
+    color: black;
+    padding: 7px;
+    border-radius: 3px;
+    margin-bottom: 0;
+}

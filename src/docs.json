@@ -7,13 +7,17 @@
             "endpoints": [
                 {
                     "url": "/api/internal/user/profile",
+                    "exampleUrl": "/api/internal/user/profile?username=ThatNobodyGuy",
                     "access": "Open Access",
-                    "method": "POST",
+                    "method": "GET",
                     "header": "Receive JSON with user info",
-                    "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more.",
+                    "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more. More data can be recieved with authentication.",
                     "code": {
-                        "countVideosCompleted": 224,
-                        "soundOn": false
+                        "username": "ThatNobodyGuy",
+                        "points": 599064,
+                        "nickname": "Luke",
+                        "streakLength": 10,
+                        "...": "..."
                     }
                 }
             ]

@@ -2,11 +2,16 @@ import React, { Component } from "react";
 
 class EndpointToggle extends Component {
     render() {
+        const endpoint = this.props.endpoint;
         return (
             <div class="endpoint-toggle" onClick={ this.props.clicked }>
-                <h3 class="endpoint-url">{ this.props.endpoint.url }</h3>
-                <h5 class={`endpoint-badge ${["POST", "PUT"].includes(this.props.endpoint.method) ? "purple" : ""}`}>{ this.props.endpoint.method }</h5>
-                <h5 class={`endpoint-badge ${this.props.endpoint.access === "Open Access" ? "blue" : "orange"}`}>{ this.props.endpoint.access }</h5>
+                {
+                    endpoint.access === "Open Access" && endpoint.method === "GET" && endpoint.exampleUrl ? 
+                    <a class="endpoint-url" href={`https://www.khanacademy.org/${endpoint.exampleUrl}`} target="_blank">{ endpoint.url }</a> :
+                    <h3 class="endpoint-url">{ endpoint.url }</h3>
+                }
+                <h5 class={`endpoint-badge ${["POST", "PUT"].includes(endpoint.method) ? "purple" : ""}`}>{ endpoint.method }</h5>
+                <h5 class={`endpoint-badge ${endpoint.access === "Open Access" ? "blue" : "orange"}`}>{ endpoint.access }</h5>
             </div>
         );
     }

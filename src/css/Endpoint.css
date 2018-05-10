@@ -26,10 +26,13 @@
 }
 
 .endpoint-url {
+    color: white;
+    margin: 15px;
     font-family: monospace;
     margin-left: 3px;
     display: inline-block;
     font-weight: 300;
+    font-size: 16px;
 }
 
 .endpoint-badge {

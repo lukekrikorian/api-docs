@@ -24,3 +24,10 @@ span {
     border-radius: 3px;
     padding: 2px;
 }
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

@@ -69,8 +69,7 @@
 }
 
 .endpoint-code {
-    background: white;
-    color: black;
+    background: #272822;
     padding: 7px;
     border-radius: 3px;
     margin-bottom: 0;

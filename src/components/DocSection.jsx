@@ -7,7 +7,7 @@ class DocSection extends Component {
         return (
             <div>
                 <h3 class="endpoint-header-title">{ this.props.title }</h3>
-                <p class="endpoint-header-description" dangerouslySetInnerHTML={{ __html: this.props.description.replace(/`([^`]+)`/g, '<span>$1</span>') }}></p>
+                <p class="endpoint-header-description" dangerouslySetInnerHTML={{ __html: this.props.description.replace(/`([^`]+)`/g, '<span class="snippet">$1</span>') }}></p>
                 <div class="endpoints">
                     <ul>{
                         this.props.endpoints.map(i => {

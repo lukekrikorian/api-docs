@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Docs from "./docs.json";
 import DocSection from "./components/DocSection";
+import "./css/prism.css";
 
 class App extends Component {
     render() {

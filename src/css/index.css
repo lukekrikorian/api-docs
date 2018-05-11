@@ -17,7 +17,7 @@ ul {
     list-style-type: none;
 }
 
-span {
+.snippet {
     color: rgb(203, 210, 214);
     background: rgb(40, 44, 53);
     font-family: monospace;

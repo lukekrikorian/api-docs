@@ -54,8 +54,12 @@
     background: rgb(99, 193, 255);
 }
 
-.purple {
+.pink {
     background: rgb(222, 60, 222);
+}
+
+.purple {
+    background: #ae81ff;
 }
 
 .endpoint-header {

@@ -8,10 +8,10 @@
                 {
                     "url": "/api/internal/user/profile",
                     "exampleUrl": "/api/internal/user/profile?username=ThatNobodyGuy",
-                    "access": "Open Access",
+                    "access": "Open | More with Auth",
                     "method": "GET",
                     "header": "Receive JSON with user info",
-                    "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more. More data can be recieved with authentication.",
+                    "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more.",
                     "code": {
                         "username": "ThatNobodyGuy",
                         "points": 599064,
@@ -19,22 +19,67 @@
                         "streakLength": 10,
                         "...": "..."
                     }
-                }
-            ]
-        },
-        "Scratchpads": {
-            "title": "Scratchpads",
-            "description": "All the scratchpads",
-            "endpoints": [
+                },
                 {
-                    "url": "/api/internal/user/profile",
-                    "access": "Auth Required",
-                    "method": "POST",
-                    "header": "Receive JSON with user info",
-                    "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more.",
+                    "url": "/api/internal/user/comments",
+                    "exampleUrl": "/api/internal/user/comments?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a list of the user's Tips & Thanks",
+                    "description": "This endpoint returns an array of the user's comments on programs, videos, or articles.",
+                    "code": [{
+                        "numberOfFlags": 0,
+                        "sumVotesIncremented": 4,
+                        "authorNickname": "Luke",
+                        "content": "Great program!",
+                        "...": "..."
+                    }, "..."]
+                },
+                {
+                    "url": "/api/internal/user/badges",
+                    "exampleUrl": "/api/internal/user/badges?username=ThatNobodyGuy",
+                    "access": "Open | More with Auth",
+                    "method": "GET",
+                    "header": "Get a list of the user's badges",
+                    "description": "This endpoint returns a list of the user's badges, contained in five different sections. The five sections correspond to the five badge rarities, and contain a nested array with the list of badges the user owns.",
                     "code": {
-                        "countVideosCompleted": 224,
-                        "soundOn": false
+                        "badgeCollections": [
+                            {
+                                "category": 0,
+                                "categoryDescription": "Meteorite badges are common and easy to earn when just getting started.",
+                                "userBadges": [
+                                    {
+                                        "count": 84,
+                                        "lastEarnedDate": "2018-04-30T21:07:49Z",
+                                        "badge": {
+                                            "description": "inspiration",
+                                            "points": 500,
+                                            "...": "..."
+                                        },
+                                        "...": "..."
+                                    },
+                                    "..."
+                                ]
+                            },
+                            "..."
+                        ]
+                    }
+                },
+                {
+                    "url": "/api/internal/user/discussion/summary",
+                    "exampleUrl": "/api/internal/user/discussion/summary?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a summary of the user's discussion history",
+                    "description": "This endpoint returns a small summary of the user's discussion history.",
+                    "code": {
+                        "statistics": {
+                            "votes": 1999,
+                            "questions": 45,
+                            "flags": 104,
+                            "...": "..."
+                        },
+                        "...": "..."
                     }
                 }
             ]

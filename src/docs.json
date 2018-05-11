@@ -10,7 +10,7 @@
                     "exampleUrl": "/api/internal/user/profile?username=ThatNobodyGuy",
                     "access": "Open | More with Auth",
                     "method": "GET",
-                    "header": "Receive JSON with user info",
+                    "header": "Get JSON with user info",
                     "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more.",
                     "code": {
                         "username": "ThatNobodyGuy",
@@ -19,21 +19,6 @@
                         "streakLength": 10,
                         "...": "..."
                     }
-                },
-                {
-                    "url": "/api/internal/user/comments",
-                    "exampleUrl": "/api/internal/user/comments?username=ThatNobodyGuy",
-                    "access": "Open Access",
-                    "method": "GET",
-                    "header": "Get a list of the user's Tips & Thanks",
-                    "description": "This endpoint returns an array of the user's comments on programs, videos, or articles.",
-                    "code": [{
-                        "numberOfFlags": 0,
-                        "sumVotesIncremented": 4,
-                        "authorNickname": "Luke",
-                        "content": "Great program!",
-                        "...": "..."
-                    }, "..."]
                 },
                 {
                     "url": "/api/internal/user/badges",
@@ -66,6 +51,27 @@
                     }
                 },
                 {
+                    "url": "/api/internal/user/scratchpads", 
+                    "exampleUrl": "/api/internal/user/scratchpads?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a list of the user's projects",
+                    "description": "This endpoint returns an array of projects (programs) for the given user. It includes a bit of information about each project.",
+                    "code": {
+                        "cursor": "...",
+                        "scratchpads": [
+                            {
+                                "title": "The Platform",
+                                "sumVotesIncremented": 440,
+                                "spinoffCount": 189, 
+                                "...": "..."
+                            },
+                            "..."
+                        ],
+                        "complete": "false"
+                    }
+                },
+                {
                     "url": "/api/internal/user/discussion/summary",
                     "exampleUrl": "/api/internal/user/discussion/summary?username=ThatNobodyGuy",
                     "access": "Open Access",
@@ -81,7 +87,158 @@
                         },
                         "...": "..."
                     }
-                }
+                },
+                {
+                    "url": "/api/internal/user/discussion/statistics",
+                    "exampleUrl": "/api/internal/user/discussion/statistics?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get statistics about a user's discussion history",
+                    "description": "This endpoint is a shortcut to the statistics section of /discussion/summary.",
+                    "code": {
+                        "votes": 1999,
+                        "questions": 45,
+                        "flags": 104, 
+                        "answers": 178,
+                        "...": "..."
+                    }
+                },
+                {
+                    "url": "/api/internal/user/questions",
+                    "exampleUrl": "/api/internal/user/questions?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a list of questions for the given user",
+                    "description": "This endpoint returns an array of all the user's questions.",
+                    "code": [{
+                        "content": "Where do you get the ideas for your games?",
+                        "sumVotesIncremented": 4,
+                        "answerCount": 3,
+                        "...": "..."
+                    }, "..."]
+                },
+                {
+                    "url": "/api/internal/user/answers",
+                    "exampleUrl": "/api/internal/user/answers?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a list of answers for the given user",
+                    "description": "This endpoint returns an array of all the user's answers, which includes information about the answer itself and its parent question.",
+                    "code": [{
+                        "content": "The acronym stands for Hyper-Text-Markup-Language.",
+                        "sumVotesIncremented": 3,
+                        "authorKaid": "kaid_933093676418892226040682",
+                        "...": "...",
+                        "question": {
+                            "content": "What does HTML stand for?",
+                            "sumVotesIncremented": 1,
+                            "authorKaid": "kaid_651269550956060156020706",
+                            "...": "..."
+                        }
+                    }, "..."]
+                },
+                {
+                    "url": "/api/internal/user/projectquestions",
+                    "exampleUrl": "/api/internal/user/projectquestions?username=elmt2",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a list of the user's project questions",
+                    "description": "This endpoint returns an array of project questions, more commonly known as help requests or project evaluation requests.",
+                    "code": [{
+                        "authorKaid": "kaid_1063314115048600759228780",
+                        "content": "Project evaluation request for 'Project: Bookshelf'.",
+                        "...": "..."
+                    }, "..."]
+                },
+                {
+                    "url": "/api/internal/user/projectanswers",
+                    "exampleUrl": "/api/internal/user/projectanswers?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a list of project answers",
+                    "description": "This endpoint returns an array of project answers, more commonly known as help request responses or project evaluations.",
+                    "code": [
+                        {
+                            "type": "projectevalanswer",
+                            "authorNickname": "Luke",
+                            "...": "...",
+                            "question": {
+                                "authorKaid": "kaid_54195600936201362818584",
+                                "...": "..."
+                            }
+                        },
+                        "..."
+                    ]
+                },
+                {
+                    "url": "/api/internal/user/comments",
+                    "exampleUrl": "/api/internal/user/comments?username=ThatNobodyGuy",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "Get a list of the user's Tips & Thanks",
+                    "description": "This endpoint returns an array of the user's comments on programs, videos, or articles.",
+                    "code": [{
+                            "numberOfFlags": 0,
+                            "sumVotesIncremented": 4,
+                            "authorNickname": "Luke",
+                            "content": "Great program!",
+                            "...": "..."
+                    }, "..."]
+                },
+                {
+                   "url": "/api/internal/user/replies",
+                   "exampleUrl": "/api/internal/user/replies?username=ThatNobodyGuy",
+                   "access": "Open Access",
+                   "method": "GET",
+                   "header": "Get a list of replies to comments by the user",
+                   "description": "This endpoint returns an array of replies to comments (Tips & Thanks, Answers) that are written by the given user.",
+                   "code": [{
+                       "content": "No problem!",
+                       "replyCount": 0,
+                       "lowQaulityScore": 0.6026,
+                       "sumVotesIncremented": 1,
+                       "...": "..."
+                   }, "..."]
+               },
+               {
+                   "url": "/api/internal/user/coaches", 
+                   "access": "Auth Required", 
+                   "method": "GET", 
+                   "header": "Get a list of the user's coaches",
+                   "description": "Returns an array of the user's coaches. If the user has none, returns an empty array.",
+                   "code": [{
+                       "username": "example",
+                       "nickname": "Example Coach",
+                       "...": "..."
+                   }, "..."]
+               },
+               {
+                   "url": "/api/internal/user/notifications/readable",
+                   "access": "Auth Required",
+                   "method": "GET",
+                   "header": "Get user notifications",
+                   "description": "Returns an array of the user's notifications.",
+                   "code": {
+                        "cursor": "...",
+                        "notifications": [{
+                            "content": "Great program!",
+                            "read": false,
+                            "authorNickname": "Jeff",
+                            "...": "..."
+                        }, "..."]
+                   }
+               },
+               {
+                   "url": "/api/internal/user/requestchild", 
+                   "access": "Auth Required",
+                   "method": "POST",
+                   "header": "Invite child", 
+                   "description": "This POST endpoint creates a child account invite for the given email.",
+                   "code": {
+                       "email": "childAccountEmail@gmail.com",
+                       "fkey": "..."
+                   }
+               }
             ]
         }
     }

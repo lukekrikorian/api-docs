@@ -10,6 +10,7 @@
     color: white;
     position: relative;
     font-weight: 300;
+    min-width: 600px;
 }
 
 .endpoint-title {

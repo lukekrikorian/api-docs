@@ -9,7 +9,7 @@ class App extends Component {
             <div>
                 <h1>KA Internal API Explorer</h1>
                 <p style={{ fontWeight: 400 }}>{ Docs.description }</p>
-                <ul>{ Object.values(Docs.docs).map(i => <li><DocSection title={ i.title } description={ i.description } endpoints={ i.endpoints }/></li>) }</ul>
+                <ul>{ Object.values(Docs.docs).map(i => <li><DocSection title={i.title} description={i.description} endpoints={i.endpoints}/></li> ) }</ul>
             </div>
         ); 
     }

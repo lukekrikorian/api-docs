@@ -438,7 +438,8 @@
                                 "authorNickname": "Matt",
                                 "spinoffCount": 4474,
                                 "translatedTitle": "Mini Putt"
-                            }
+                            },
+                            "..."
                         ],
                         "complete": false
                     }
@@ -449,8 +450,21 @@
                     "access": "Open Access",
                     "method": "GET",
                     "head": "Show Scratchpad",
-                    "description": "This endpoint is used by KA when you navigate to a program. It returns a ton more information than just /scratchpads/, including information about the author and the computer programming subject on KA. (It's too much information to include below, but you can click on the example link.) It requires a `scratchpad_id` query parameter.",
-                    "code": {}
+                    "description": "This endpoint is used by KA when you navigate to a program. It requires a `scratchpad_id` query parameter.",
+                    "code": {
+                        "scratchpad": {
+                            "hideFromHotlist": false,
+                            "canvasOnly": false,
+                            "title": "KA Internal API Reference",
+                            "...": "..."
+                        },
+                        "revision": {
+                            "code": "//This is a game a while back...",
+                            "hasAudio": false,
+                            "...": "..."
+                        },
+                        "...": "..."
+                    }
                 },
                 {
                     "url": "/api/internal/scratchpads/documentation/titles",

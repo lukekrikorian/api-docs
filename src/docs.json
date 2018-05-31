@@ -240,6 +240,239 @@
                    }
                }
             ]
+        },
+        "Scratchpads": {
+            "title": "Program",
+            "description": "Program endpoints. Called scratchpads in the code because these endpoints also work for types of scratchpads like <a href='https://www.khanacademy.org/biology/writing/5344641979645952'>writing ones.</a>",
+            "endpoints": [
+                {
+                    "url": "/api/internal/user/scratchpads",
+                    "access": "Auth Required",
+                    "method": "POST",
+                    "header": "Create a new program",
+                    "description": "Make an authenticated POST request to this URL with program data, formated as follows, in order to create a new program.",
+                    "code": {
+                        "title": "Test program",
+                        "translatedTitle": "Test program",
+                        "category": null,
+                        "difficulty": null,
+                        "tags": [],
+                        "userAuthoredContentType": "pjs",
+                        "topicId": "xffde7c31",
+                        "revision": {
+                            "code": "//Code here",
+                            "editor_type": "ace_pjs",
+                            "folds": [],
+                            "image_url": "[Image data here]",
+                            "config_version": 4,
+                            "topic_slug": "computer-programming",
+                            "playback": ""
+                        },
+                        "trustedRevision": {
+                            "created": "2017-10-07T19:56:55.141Z"
+                        }
+                    }
+                },
+                {
+                    "url": "/api/internal/scratchpads/<program-id>",
+                    "exampleUrl": "/api/internal/scratchpads/6389992281473024",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "View info about a program",
+                    "description": "Some have called this the main program endpoint. It lets you view basic information about a program, including date created and flags. For more information, like creator nickname, use view_scratchpad. Some but not all of the data it returns are recorded below.",
+                    "code": {
+                        "hideFromHotlist": false,
+                        "relativeUrl": "/computer-programming/ka-internal-api-reference/6389992281473024",
+                        "originScratchpadId": null,
+                        "height": 400,
+                        "originIsProject": false,
+                        "date": "2018-03-08T04:01:11Z",
+                        "originSimilarity": 0.0,
+                        "id": 6389992281473024,
+                        "originRevisionId": null,
+                        "width": 400,
+                        "spinoffCount": 6,
+                        "contentKind": "Scratchpad",
+                        "type": "scratchpad",
+                        "revision": {
+                            "code": "//Code here",
+                            "tests": "//This is extra code that doesn't show up in the editor but still gets run.",
+                            "created": "2018-03-08T04:01:11Z",
+                            "folds": [
+                                [
+                                    47,
+                                    75
+                                ]
+                            ],
+                            "editorType": "ace_pjs",
+                            "id": 5752142325350400
+                        },
+                        "imagePath": "/computer-programming/ka-internal-api-reference/6389992281473024/5752142325350400.png",
+                        "nodeType": "scratchpad",
+                        "byChild": false,
+                        "slug": "ka-internal-api-reference",
+                        "kind": "Scratchpad",
+                        "globalId": "p6389992281473024",
+                        "created": "2016-07-24T03:24:46Z",
+                        "url": "https://www.khanacademy.org/computer-programming/ka-internal-api-reference/6389992281473024",
+                        "imageUrl": "https://www.khanacademy.org/computer-programming/ka-internal-api-reference/6389992281473024/5752142325350400.png",
+                        "title": "KA Internal API Reference",
+                        "sumVotesIncremented": 26,
+                        "flags": [],
+                        "userAuthoredContentType": "pjs",
+                        "kaid": "kaid_757721856896775939251306",
+                        "translatedTitle": "KA Internal API Reference"
+                    }
+                },
+                {
+                    "url": "/api/internal/scratchpads/<program-id>",
+                    "access": "Auth Required",
+                    "method": "PUT",
+                    "header": "Edit a program",
+                    "description": "By sending an authorized PUT request, you can edit a program. At most you can send all the data that can be returned from a GET request, and you must include the properties below (though valid values for them are not enforced). Most properties will be ignored, and can't be changed. As a general rule, you can change anything inside of the `revision` object above. Returns the same data as a GET request, with your changes applied.",
+                    "code": {
+                        "revision":{
+                            "code": "//Code goes here.",
+                            "topic_slug": "computer-programming",
+                            "title": "Not technially neccessary, but if you don't include it your program won't have a title and things break."
+                        },
+                        "trustedRevision": {
+                            "created":"2022-02-22T2:12:22.222Z"
+                        }
+                    }
+                },
+                {
+                    "url": "/api/internal/scratchpads/<program-id>",
+                    "access": "Auth Required",
+                    "method": "DELETE",
+                    "header": "Delete a program",
+                    "description": "By sending an authorized DELETE request, you can delete a program. Returns a 204 No Content if it is successful.",
+                    "code": ""
+                },
+                {
+                    "url": "/api/internal/scratchpads/<program-id>/top-forks",
+                    "exampleUrl": "/api/internal/scratchpads/6389992281473024/top-forks",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "header": "View the most voted spin-offs",
+                    "description": "A GET request to this endpoint allows you to view the spin offs of a program, sorted by votes. The cursor value can be imagined as a line right after the last program returned. A request with a `cursor=` query parameter will signal where to start returning programs from.",
+                    "code": {
+                        "cursor": "ClQKIwoWdGltZV9pbmRlcGVuZGVudF9zY29yZRIJIZoCkxq4M9s_EilqDnN-a2hhbi1hY2FkZW15chcLEgpTY3JhdGNocGFkGICAxLntpNcJDBgAIAE=",
+                        "scratchpads": [
+                            {
+                                "thumb": "/computer-programming/spin-off-of-ka-internal-api-reference/5450445957955584/5685265389584384.png",
+                                "title": "Spin-off of \"KA Internal API Reference\"",
+                                "url": "https://www.khanacademy.org/computer-programming/spin-off-of-ka-internal-api-reference/5450445957955584",
+                                "created": "2016-12-08T11:51:02Z",
+                                "sumVotesIncremented": 2,
+                                "flaggedByUser": false,
+                                "authorKaid": "kaid_81362966112265784826696",
+                                "key": "ag5zfmtoYW4tYWNhZGVteXIXCxIKU2NyYXRjaHBhZBiAgMS57aTXCQw",
+                                "translatedTitle": "Spin-off of \"KA Internal API Reference\"",
+                                "spinoffCount": 0,
+                                "authorNickname": "Sequel Maker"
+                            }
+                        ],
+                        "complete": true
+                    }
+                },
+                {
+                    "url": "/api/internal/scratchpads/<program-id>/user-forks",
+                    "exampleUrl": "/api/internal/scratchpads/6389992281473024/user-forks",
+                    "access": "Auth Required",
+                    "method": "GET",
+                    "header": "Your Spin-Offs of a Program",
+                    "description": "Used for the \"Your Spin-offs\" header under a program. Works the same way as above, but only returns spin-offs that you've made.",
+                    "code": {
+                        "cursor": "ClQKIwoWdGltZV9pbmRlcGVuZGVudF9zY29yZRIJIZoCkxq4M9s_EilqDnN-a2hhbi1hY2FkZW15chcLEgpTY3JhdGNocGFkGICAxLntpNcJDBgAIAE=",
+                        "scratchpads": [
+                            {
+                                "thumb": "/computer-programming/spin-off-of-ka-internal-api-reference/5450445957955584/5685265389584384.png",
+                                "title": "Spin-off of \"KA Internal API Reference\"",
+                                "url": "https://www.khanacademy.org/computer-programming/spin-off-of-ka-internal-api-reference/5450445957955584",
+                                "created": "2016-12-08T11:51:02Z",
+                                "sumVotesIncremented": 2,
+                                "flaggedByUser": false,
+                                "authorKaid": "kaid_81362966112265784826696",
+                                "key": "ag5zfmtoYW4tYWNhZGVteXIXCxIKU2NyYXRjaHBhZBiAgMS57aTXCQw",
+                                "translatedTitle": "Spin-off of \"KA Internal API Reference\"",
+                                "spinoffCount": 0,
+                                "authorNickname": "Sequel Maker"
+                            }
+                        ],
+                        "complete": true
+                    }
+                },
+                {
+                    "url": "/api/internal/scratchpads/top",
+                    "exampleUrl": "/api/internal/scratchpads/top?sort=5&limit=3&topic_id=xffde7c31",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "head": "The big lists",
+                    "description": "This link is used for the hot, top, new, and contests lists. It accepts the `cursor` query parameter, and `topic_id=xffde7c31` is required for computer science projects. It also requires the `sort` query parameter, where valid values are 2 for new, 3 for hot, 4 for contests, 5 for top.",
+                    "code": {
+                        "cursor": "CjwKDgoHdXB2b3RlcxIDCKZJEiZqDnN-a2hhbi1hY2FkZW15chQLEgpTY3JhdGNocGFkGOm9sNYFDBgAIAE=",
+                        "scratchpads": [
+                            {
+                                "thumb": "/computer-programming/doodle-jump/1431776579/5747976207073280.png",
+                                "title": "doodle jump",
+                                "url": "https://www.khanacademy.org/computer-programming/doodle-jump/1431776579",
+                                "created": "2015-09-26T19:38:23Z",
+                                "sumVotesIncremented": 11533,
+                                "flaggedByUser": false,
+                                "authorKaid": "kaid_401615247760834240742277",
+                                "key": "ag5zfmtoYW4tYWNhZGVteXIUCxIKU2NyYXRjaHBhZBjD2tyqBQw",
+                                "authorNickname": "nordituck",
+                                "spinoffCount": 10263,
+                                "translatedTitle": "doodle jump"
+                            },
+                            {
+                                "thumb": "/computer-programming/mini-putt/5995007307677696/5703222647848960.png",
+                                "title": "Mini Putt",
+                                "url": "https://www.khanacademy.org/computer-programming/mini-putt/5995007307677696",
+                                "created": "2016-09-26T17:10:57Z",
+                                "sumVotesIncremented": 9673,
+                                "flaggedByUser": false,
+                                "authorKaid": "kaid_619178423698483567366737",
+                                "key": "ag5zfmtoYW4tYWNhZGVteXIXCxIKU2NyYXRjaHBhZBiAgIDI1o3TCgw",
+                                "authorNickname": "Matt",
+                                "spinoffCount": 4474,
+                                "translatedTitle": "Mini Putt"
+                            }
+                        ],
+                        "complete": false
+                    }
+                },
+                {
+                    "url": "/api/internal/show_scratchpad",
+                    "exampleUrl": "/api/internal/show_scratchpad?scratchpad_id=6389992281473024",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "head": "Show Scratchpad",
+                    "description": "This endpoint is used by KA when you navigate to a program. It returns a ton more information than just /scratchpads/, including information about the author and the computer programming subject on KA. (It's too much information to include below, but you can click on the example link.) It requires a `scratchpad_id` query parameter.",
+                    "code": {}
+                },
+                {
+                    "url": "/api/internal/scratchpads/documentation/titles",
+                    "exampleUrl": "/api/internal/scratchpads/documentation/titles",
+                    "access": "Open Access",
+                    "method": "GET",
+                    "head": "Documentation Titles",
+                    "description": "KA uses this in part to construct the documentation tab when opening a program. It's not particularly useful.",
+                    "code": [
+                        "point(x, y) | ProcessingJS",
+                        "random(low, high) | ProcessingJS",
+                        "line(x1, y1, x2, y2) | ProcessingJS",
+                        "ellipse(x, y, w, h) | ProcessingJS",
+                        "rect(x, y, width, height, radius)",
+                        "stroke(r, g, b, a*) | ProcessingJS",
+                        "triangle(x1, y1, x2, y2, x3, y3) | ProcessingJS",
+                        "background(r, g, b, a*) | ProcessingJS",
+                        "fill(r, g, b, a*) | ProcessingJS",
+                        "..."
+                    ]
+                }
+            ]
         }
     }
 }

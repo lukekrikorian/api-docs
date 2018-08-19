@@ -7,13 +7,13 @@
             "endpoints": [
                 {
                     "url": "/api/internal/user/profile",
-                    "exampleUrl": "/api/internal/user/profile?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/profile?username=lukekrikorian",
                     "access": "Open | More with Auth",
                     "method": "GET",
                     "header": "Get JSON with user info",
                     "description": "Get user info like showcase badges, points, videos watched, KAID, avatar, and much more.",
                     "code": {
-                        "username": "ThatNobodyGuy",
+                        "username": "lukekrikorian",
                         "points": 599064,
                         "nickname": "Luke",
                         "streakLength": 10,
@@ -22,7 +22,7 @@
                 },
                 {
                     "url": "/api/internal/user/badges",
-                    "exampleUrl": "/api/internal/user/badges?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/badges?username=lukekrikorian",
                     "access": "Open | More with Auth",
                     "method": "GET",
                     "header": "Get a list of the user's badges",
@@ -52,7 +52,7 @@
                 },
                 {
                     "url": "/api/internal/user/scratchpads", 
-                    "exampleUrl": "/api/internal/user/scratchpads?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/scratchpads?username=lukekrikorian",
                     "access": "Open Access",
                     "method": "GET",
                     "header": "Get a list of the user's projects",
@@ -73,7 +73,7 @@
                 },
                 {
                     "url": "/api/internal/user/discussion/summary",
-                    "exampleUrl": "/api/internal/user/discussion/summary?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/discussion/summary?username=lukekrikorian",
                     "access": "Open Access",
                     "method": "GET",
                     "header": "Get a summary of the user's discussion history",
@@ -90,7 +90,7 @@
                 },
                 {
                     "url": "/api/internal/user/discussion/statistics",
-                    "exampleUrl": "/api/internal/user/discussion/statistics?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/discussion/statistics?username=lukekrikorian",
                     "access": "Open Access",
                     "method": "GET",
                     "header": "Get statistics about a user's discussion history",
@@ -105,7 +105,7 @@
                 },
                 {
                     "url": "/api/internal/user/questions",
-                    "exampleUrl": "/api/internal/user/questions?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/questions?username=lukekrikorian",
                     "access": "Open Access",
                     "method": "GET",
                     "header": "Get a list of questions for the given user",
@@ -119,7 +119,7 @@
                 },
                 {
                     "url": "/api/internal/user/answers",
-                    "exampleUrl": "/api/internal/user/answers?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/answers?username=lukekrikorian",
                     "access": "Open Access",
                     "method": "GET",
                     "header": "Get a list of answers for the given user",
@@ -152,7 +152,7 @@
                 },
                 {
                     "url": "/api/internal/user/projectanswers",
-                    "exampleUrl": "/api/internal/user/projectanswers?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/projectanswers?username=lukekrikorian",
                     "access": "Open Access",
                     "method": "GET",
                     "header": "Get a list of project answers",
@@ -172,7 +172,7 @@
                 },
                 {
                     "url": "/api/internal/user/comments",
-                    "exampleUrl": "/api/internal/user/comments?username=ThatNobodyGuy",
+                    "exampleUrl": "/api/internal/user/comments?username=lukekrikorian",
                     "access": "Open Access",
                     "method": "GET",
                     "header": "Get a list of the user's Tips & Thanks",
@@ -187,7 +187,7 @@
                 },
                 {
                    "url": "/api/internal/user/replies",
-                   "exampleUrl": "/api/internal/user/replies?username=ThatNobodyGuy",
+                   "exampleUrl": "/api/internal/user/replies?username=lukekrikorian",
                    "access": "Open Access",
                    "method": "GET",
                    "header": "Get a list of replies to comments by the user",
